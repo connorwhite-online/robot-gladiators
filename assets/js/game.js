@@ -92,6 +92,12 @@ playerMoney = 10;
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
+
+    // if player is still alive and we're not at the last enemy in the array
+    if (playerHealth > 0 && i < enemyNames.length - 1) {
+      shop();
+    }
+}
     }
     // if player isn't alive, stop the game
     else {
