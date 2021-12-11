@@ -64,6 +64,13 @@ var fight = function(enemyName) {
   }
 };
 
+// function to generate a random numeric value
+var randomNumber = function() {
+  var value = Math.floor(Math.random() * 21) + 40;
+
+  return value;
+};
+
 // function to start a new game
 var startGame = function() {
   // reset player stats
@@ -82,7 +89,7 @@ var startGame = function() {
       var pickedEnemyName = enemyNames[i];
 
       // reset enemyHealth before starting new fight
-      enemyHealth = Math.floor(Math.random() * 21) + 40;
+      enemyHealth = randomNumber();
 
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
       fight(pickedEnemyName);
@@ -178,12 +185,6 @@ var shop = function() {
       shop();
       break;
   }
-};
-// function to generate a random numeric value
-var randomNumber = function() {
-  var value = Math.floor(Math.random() * 21) + 40;
-
-  return value;
 };
 
 // start first game when page loads
